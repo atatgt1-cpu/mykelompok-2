@@ -1,0 +1,6 @@
+{
+  "name": "Kelompok 2 — Space Creative Portfolio",
+  "description": "Portofolio digital interaktif dan ruang eksplorasi karya Kelompok 2 dengan desain luar angkasa mutakhir, micro-interactions mulus, dan adaptif di semua perangkat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
