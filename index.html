@@ -1,22 +1,170 @@
-<!doctype html>
-<html lang="id" class="dark scroll-smooth">
+<!DOCTYPE html>
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#030712" />
-    <title>Kelompok 2 — Space Creative Portfolio</title>
-    <meta name="description" content="Portofolio digital interaktif dan ruang eksplorasi karya Kelompok 2 dengan desain luar angkasa mutakhir, micro-interactions mulus, dan adaptif di semua perangkat." />
-    <meta property="og:title" content="Kelompok 2 — Space Creative Portfolio" />
-    <meta property="og:description" content="Portofolio digital interaktif dan ruang eksplorasi karya Kelompok 2 dengan desain luar angkasa mutakhir, micro-interactions mulus, dan adaptif di semua perangkat." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#020817" />
+    <title>Kelompok 2 | Space Creative Portfolio</title>
+    <meta
+      name="description"
+      content="Portofolio digital interaktif Kelompok 2 dengan desain luar angkasa, showcase proyek, dan profil anggota tim."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-[#030712] text-[#f1f5f9] antialiased selection:bg-cyan-500/30 selection:text-cyan-200 overflow-x-hidden">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <body>
+    <header class="site-header" id="header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home" aria-label="Ke halaman utama">
+          <span class="brand-mark">K2</span>
+          <span>Kelompok 2</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigasi" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav-panel" aria-label="Navigasi utama">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#members">Members</a>
+          <a href="#projects">Projects</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <span class="eyebrow">Space Creative Portfolio</span>
+            <h1>Kelompok 2</h1>
+            <p id="typingText" class="typing-text" aria-live="polite"></p>
+            <p class="lead">
+              Membangun ide, narasi, dan pengalaman digital yang memadukan kreativitas,
+              strategi, dan teknologi dalam satu ruang eksplorasi.
+            </p>
+
+            <div class="cta-row">
+              <button class="primary-btn" data-target="projects" type="button">Explore Projects</button>
+              <button class="secondary-btn" data-target="members" type="button">Meet the Team</button>
+            </div>
+
+            <ul class="hero-stats">
+              <li><strong>4</strong><span>Anggota Tim</span></li>
+              <li><strong>6</strong><span>Proyek Digital</span></li>
+              <li><strong>100%</strong><span>Kolaboratif</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="orb orb-one"></div>
+            <div class="orb orb-two"></div>
+            <div class="image-frame">
+              <img
+                src="./images/hero_space_explorer_1792402871269.jpg"
+                alt="Hero illustration"
+                loading="eager"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section section-alt">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">About</span>
+            <h2>Creative Narrative & Digital Mastery</h2>
+          </div>
+
+          <div class="about-grid">
+            <article class="info-card reveal">
+              <span class="card-kicker">Vision</span>
+              <h3>Transformasi belajar menjadi pengalaman yang hidup.</h3>
+              <p>
+                Kelompok 2 menggabungkan literasi bahasa Inggris, desain visual, dan
+                teknologi untuk menghadirkan materi yang lebih mudah dipahami, menarik,
+                dan berkesan.
+              </p>
+            </article>
+
+            <article class="info-card reveal">
+              <span class="card-kicker">Approach</span>
+              <h3>Riset, struktur, dan storytelling yang terarah.</h3>
+              <p>
+                Setiap proyek dibangun dengan pendekatan kronologis, konten bermakna,
+                dan elemen visual yang memperkuat pemahaman siswa maupun audiens.
+              </p>
+            </article>
+
+            <article class="info-card reveal">
+              <span class="card-kicker">Impact</span>
+              <h3>Output edukatif yang berfungsi sekaligus estetis.</h3>
+              <p>
+                Dari recount text, mind map, hingga infografis dan storybook interaktif,
+                semua karya ditujukan untuk mendorong belajar aktif dan kreatif.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="members" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Members</span>
+            <h2>Tim yang Menggerakkan Ide</h2>
+          </div>
+          <div id="memberGrid" class="member-grid"></div>
+        </div>
+      </section>
+
+      <section id="projects" class="section section-alt">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Projects</span>
+            <h2>Showcase Karya Terpilih</h2>
+          </div>
+
+          <div class="filter-bar reveal" aria-label="Filter project">
+            <button class="filter-btn active" type="button" data-filter="all">All</button>
+            <button class="filter-btn" type="button" data-filter="Recount Text">Recount</button>
+            <button class="filter-btn" type="button" data-filter="Story Book">Story Book</button>
+            <button class="filter-btn" type="button" data-filter="Presentasi">Presentasi</button>
+            <button class="filter-btn" type="button" data-filter="Mind Map">Mind Map</button>
+            <button class="filter-btn" type="button" data-filter="Infografis">Infografis</button>
+          </div>
+
+          <div id="projectGrid" class="project-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© <span id="year"></span> Kelompok 2. All rights reserved.</p>
+        <a href="#home" class="footer-link">Back to top</a>
+      </div>
+    </footer>
+
+    <button class="scroll-top" type="button" aria-label="Scroll ke atas">↑</button>
+
+    <div id="projectModal" class="modal" aria-hidden="true">
+      <div class="modal__backdrop" data-close="true"></div>
+      <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal__close" type="button" aria-label="Tutup modal">×</button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
-
